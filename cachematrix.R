@@ -32,14 +32,14 @@ makeCacheMatrix <- function(x = matrix()) {
         matinv <- NULL			# initialise matrix inverse to NULL
 
         set <- function(y) {	# define set method to set value of matrix 
-                x <<- y			# cache matrix 'x' to Global environment
-                matinv <<- NULL	# cache matrix inverse to Global environment
+                x <<- y			# set matrix 'x' to value of arg passed to fn
+                matinv <<- NULL	# set matrix inverse to NULL to initialise
         }
 
         get <- function() x		# define get method to return matrix 'x'
 
-        setinv <- function(solve) matinv <<- solve
-        getinv <- function() matinv
+        setinv <- function(solve) matinv <<- solve  # perform matrix inversion
+        getinv <- function() matinv  # define get method to return inversion
 
         list(set = set, get = get,	# define list of method definitions for
              setinv = setinv,		#	function
