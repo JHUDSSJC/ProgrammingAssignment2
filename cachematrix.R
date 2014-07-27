@@ -17,8 +17,7 @@
 ## forked version by student: JHUDSSJC
 ## Coursera Course: R Programming (05) start: 4 July 2014
 ##
-## Repository: JHUDSSJC Git Account
-## Fork: 	https://github.com/JHUDSSJC/ProgrammingAssignment2
+## Fork Repository: https://github.com/JHUDSSJC/ProgrammingAssignment2
 ##
 
 makeCacheMatrix <- function(x = matrix()) {
@@ -50,7 +49,6 @@ makeCacheMatrix <- function(x = matrix()) {
 
 }
 
-
 cacheSolve <- function(x, ...) {
 
 ## This function computes the inverse of the special "matrix" returned by 
@@ -62,7 +60,7 @@ cacheSolve <- function(x, ...) {
         						# store in local matinv variable 
 
         if(!is.null(matinv)) {	# if the cached matrix inverse is not NULL
-                message("getting cached matrix")	# print message to user
+                message("getting cached inverse")	# print message to user
                 return(matinv)						# return the cached value
         }
         
